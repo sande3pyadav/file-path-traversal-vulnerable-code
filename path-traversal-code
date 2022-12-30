@@ -1,0 +1,8 @@
+<?php
+    $img=$_GET['image'];
+    $file = 'image/'.$img;
+
+    header('Content-Type: image/png');
+    header('Content-Length: ' . filesize($file));
+    echo file_get_contents($file);
+?>
